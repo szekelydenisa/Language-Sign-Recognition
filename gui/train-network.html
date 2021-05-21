@@ -1,0 +1,103 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+          if (typeof module === 'object') {
+              window.module = module;
+              module = undefined;
+          }
+    </script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script>
+          if (window.module) module = window.module;
+    </script>
+    <script>
+        function showFileBox() {
+            const { dialog } = require('electron').remote;
+            var path = dialog.showOpenDialog({
+             properties: ['openDirectory']
+            })
+           document.getElementById("path").value = path
+           document.getElementById("filename").innerHTML = path
+      }
+    </script>
+  <script src='linkers/create-gesture.js'></script>
+  <script src='linkers/train-network.js'></script>
+  </head>
+  <body>
+    <section class="hero-area-fix">
+        <div class="hero-area" id="water">
+            <div class="container">
+                <div class="row">
+                    <div class="hero-text">
+                        <h1>TRAIN NETWORK</h1>
+                        <div id="typed-strings">
+                            <h3>Create your own gesture or go back to the main menu.</h3>
+                        </div>
+                        <h3><span id="typed"></span></h3>
+                        <h4>Get started!</h4>
+                        <a href="#" class="btn view-demo" data-scroll-nav="1">View Demos</a>
+                        <a href="index.html" class="btn buy-now">Main menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <section class="product-landing pro_d" data-scroll-index="1">
+            <div class="container">
+                <div class="row">
+                    <h2 class="title">How to add your own gesture</h2>
+                    <p>1. Select the folder where you want to save your new dataset and insert the gesture name.</p>
+                    <p>2. Press Go!</p>
+                    <p>3. Wait until the frame window is coming up and place your hand in the green square then press 'S' to start recording.</p>
+                    <p>4. You should see a pop-up with the number of frames you recorded, the maximum is 3001, if you want to record less than that just press 'Q' when you're done.</p>
+                    <p>5. Now let's train the network! Just select the dataset folder and then press Train! Based on your computer performance this may take a while.. so, go grab a snack and start your favorite Netflix series!</p>
+      <button onclick="showFileBox()" class="btn btn-success">Select folder</button>
+      <p id="filename"></p>
+        <input type="text" value="" name="path" id="path" style="display: none"></input>
+        <input type="text" value="" name="gesture" id="gesture" placeholder="Gesture name"></input>
+      <button type="submit" id="ob_detect" class="btn btn-warning" onclick="create_gesture()">Go!</button>
+      <button type="submit" id="ob_detect" class="btn btn-warning" onclick="train_network()">Train!</button>
+      
+    </div>
+</div>
+</section>
+    
+
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row text-center">
+                <p class="copyright">
+                    
+Copyright &copy; All rights reserved | Denisa-Simina Szekely
+                        </p>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer area-->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/nav.js"></script>
+    <!--waypoint js-->
+    <script src="vendores/waypoint/waypoints.min.js"></script>
+    <!--counter js-->
+    <script src="vendores/couterup/jquery.counterup.min.js"></script>
+    <script src="vendores/typedjs/typed.min.js"></script>
+    <script src="vendores/ripples/jquery.ripples-min.js"></script>
+    <script type="text/javascript" src="js/scrollIt.min.js"></script>
+    <script type="text/javascript" src="js/wow.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+    </script>
+    <script>
+    </script>
+  <body>
